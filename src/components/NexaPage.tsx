@@ -1,12 +1,9 @@
-import { ExternalLink, Github, Users, Target, Lightbulb, FileText } from "lucide-react";
+import { ArrowLeft, Home, ExternalLink, Github, Users, Target, Lightbulb, FileText } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
-type NavigationFunction = (page: 'home' | 'contact' | 'learn-more' | 'labor-tracker' | 'qfaen' | 'nexa' | 'marven' | 'team') => void;
+export function NexaPage() {
+  const navigate = useNavigate();
 
-interface NexaPageProps {
-  onNavigate: NavigationFunction;
-}
-
-export function NexaPage({ onNavigate }: NexaPageProps) {
   const handleGitHubLink = () => {
     window.open('https://www.github.com/ahesh001/NEXA', '_blank');
   };
@@ -24,15 +21,17 @@ export function NexaPage({ onNavigate }: NexaPageProps) {
       {/* Navigation */}
       <nav className="relative z-10 p-6 flex justify-between items-center">
         <button 
-          onClick={() => onNavigate('learn-more')}
+          onClick={() => navigate(-1)}
           className="text-slate-300 hover:text-white transition-colors duration-300 flex items-center gap-2"
         >
-          ← Back to Learn More
+          <ArrowLeft className="w-4 h-4" />
+          Back
         </button>
         <button 
-          onClick={() => onNavigate('home')}
-          className="text-slate-300 hover:text-white transition-colors duration-300"
+          onClick={() => navigate('/')}
+          className="text-slate-300 hover:text-white transition-colors duration-300 flex items-center gap-2"
         >
+          <Home className="w-4 h-4" />
           Home
         </button>
       </nav>
@@ -368,7 +367,7 @@ export function NexaPage({ onNavigate }: NexaPageProps) {
             </p>
             <div className="flex gap-4 justify-center">
               <button 
-                onClick={() => onNavigate('contact')}
+                onClick={() => navigate('/contact')}
                 className="px-6 py-3 bg-gradient-to-r from-cyan-600 to-purple-600 text-white rounded-lg hover:from-cyan-700 hover:to-purple-700 transition-all duration-300"
               >
                 Research Partnership

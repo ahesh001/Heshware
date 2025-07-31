@@ -1,16 +1,14 @@
-type NavigationFunction = (page: 'home' | 'contact' | 'learn-more' | 'labor-tracker' | 'qfaen' | 'nexa' | 'marven' | 'team') => void;
+import { useNavigate } from 'react-router-dom';
 
-interface TeamPageProps {
-  onNavigate: NavigationFunction;
-}
+export function TeamPage() {
+  const navigate = useNavigate();
 
-export function TeamPage({ onNavigate }: TeamPageProps) {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-black relative overflow-hidden">
       {/* Navigation */}
       <nav className="relative z-10 p-6">
         <button 
-          onClick={() => onNavigate('home')}
+          onClick={() => navigate('/')}
           className="text-slate-300 hover:text-white transition-colors duration-300 flex items-center gap-2"
         >
           ← Back to Home
@@ -160,7 +158,7 @@ export function TeamPage({ onNavigate }: TeamPageProps) {
               </p>
               <div className="flex gap-4 justify-center">
                 <button 
-                  onClick={() => onNavigate('contact')}
+                  onClick={() => navigate('/contact')}
                   className="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
                 >
                   Career Opportunities

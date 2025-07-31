@@ -1,0 +1,33 @@
+{
+  // Allow Tailwind/PostCSS at-rules without lint errors
+  "css.lint.unknownAtRules": [
+    "tailwind",
+    "apply",
+    "layer",
+    "variants",
+    "responsive",
+    "screen",
+    "custom-variant",
+    "theme"
+  ],
+  "scss.lint.unknownAtRules": [
+    "tailwind",
+    "apply",
+    "layer",
+    "variants",
+    "responsive",
+    "screen",
+    "custom-variant",
+    "theme"
+  ],
+  "less.lint.unknownAtRules": [
+    "tailwind",
+    "apply",
+    "layer",
+    "variants",
+    "responsive",
+    "screen",
+    "custom-variant",
+    "theme"
+  ]
+}
