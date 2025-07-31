@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route, Link, Navigate, BrowserRouter } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate, useNavigate, BrowserRouter } from 'react-router-dom';
 import { HomePage } from './components/HomePage';
 import { ContactPage } from './components/ContactPage';
 import { LearnMorePage } from './components/LearnMorePage';
@@ -24,10 +25,16 @@ export default function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/learn-more" element={<LearnMorePage />} />
-        <Route path="/labor-tracker" element={<LaborTrackerPage />} />
-        <Route path="/qfaen" element={<QfaenPage />} />
+        <Route path="/labor-tracker" element={<LaborTrackerPage onNavigate={function (page: 'home' | 'contact' | 'learn-more' | 'labor-tracker' | 'smartbox' | 'nexa' | 'marven'): void {
+          throw new Error('Function not implemented.');
+        } } />} />
+        <Route path="/qfaen" element={<QfaenPage onNavigate={function (page: 'home' | 'contact' | 'learn-more' | 'labor-tracker' | 'qfaen' | 'nexa' | 'marven' | 'team'): void {
+          throw new Error('Function not implemented.');
+        } } />} />
         <Route path="/nexa" element={<NexaPage />} />
-        <Route path="/marven" element={<MarvenPage />} />
+        <Route path="/marven" element={<MarvenPage onNavigate={function (page: 'home' | 'contact' | 'learn-more' | 'labor-tracker' | 'smartbox' | 'nexa' | 'marven'): void {
+          throw new Error('Function not implemented.');
+        } } />} />
         <Route path="/team" element={<TeamPage />} />
         <Route path="/mission-expansion" element={<MissionExpansionPage />} />
         <Route path="/heshware-quantum" element={<HeshwareQuantumPage />} />

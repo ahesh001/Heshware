@@ -17,19 +17,9 @@ export function MarvenPage({ onNavigate }: MarvenPageProps) {
       </div>
 
       {/* Navigation */}
-      <nav className="relative z-10 p-6 flex justify-between items-center">
-        <button 
-          onClick={() => onNavigate('learn-more')}
-          className="text-slate-300 hover:text-white transition-colors duration-300 flex items-center gap-2"
-        >
-          ← Back to Learn More
-        </button>
-        <button 
-          onClick={() => onNavigate('home')}
-          className="text-slate-300 hover:text-white transition-colors duration-300"
-        >
-          Home
-        </button>
+<nav>
+        <button onClick={() => onNavigate("learn-more")}>← Back to Learn More</button>
+        <button onClick={() => onNavigate("home")}>Home</button>
       </nav>
 
       {/* Header */}
