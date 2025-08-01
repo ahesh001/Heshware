@@ -1,4 +1,7 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import { getAuth, verifyPasswordResetCode, confirmPasswordReset } from "firebase/auth";
+import { initializeApp } from "firebase/app";
+import { firebaseConfig } from "../../firebaseConfig"; // Adjust the import path as necessary
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import { Eye, EyeOff, Lock, Shield, CheckCircle, XCircle, ArrowLeft } from 'lucide-react';
 import { Button } from './ui/button';
@@ -7,27 +10,8 @@ import { Label } from './ui/label';
 import { Card, CardHeader, CardContent, CardDescription, CardTitle } from './ui/card';
 import { Alert, AlertDescription } from './ui/alert';
 
-// Mock Firebase functions for demo - replace with actual Firebase imports
-const mockFirebase = {
-  auth: () => ({
-    verifyPasswordResetCode: async (oobCode: string) => {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      if (oobCode === 'invalid') {
-        throw new Error('Invalid or expired password reset code');
-      }
-      return 'user@example.com'; // Returns email associated with the code
-    },
-    confirmPasswordReset: async (oobCode: string, newPassword: string) => {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      if (oobCode === 'invalid') {
-        throw new Error('Invalid or expired password reset code');
-      }
-      return true;
-    }
-  })
-};
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
 
 export function PasswordResetPage() {
   const [searchParams] = useSearchParams();
@@ -57,64 +41,54 @@ export function PasswordResetPage() {
     validateResetCode(code);
   }, [searchParams]);
 
+    // Validate the code
   const validateResetCode = async (code: string) => {
     try {
       setIsValidating(true);
-      setValidationError('');
-      
-      // Replace with actual Firebase call:
-      // const userEmail = await firebase.auth().verifyPasswordResetCode(code);
-      const userEmail = await mockFirebase.auth().verifyPasswordResetCode(code);
-      
+      setValidationError("");
+      const userEmail = await verifyPasswordResetCode(auth, code);
       setEmail(userEmail);
       setIsValid(true);
-    } catch (err) {
-      setValidationError(err instanceof Error ? err.message : 'Invalid or expired reset link');
+    } catch (err: any) {
+      setValidationError(err.message ?? "Invalid or expired reset link");
       setIsValid(false);
     } finally {
       setIsValidating(false);
     }
   };
 
+  // Password strength check
   const validatePassword = (password: string): string[] => {
     const errors: string[] = [];
-    if (password.length < 8) errors.push('At least 8 characters');
-    if (!/[A-Z]/.test(password)) errors.push('One uppercase letter');
-    if (!/[a-z]/.test(password)) errors.push('One lowercase letter');
-    if (!/\d/.test(password)) errors.push('One number');
-    if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) errors.push('One special character');
+    if (password.length < 8) errors.push("At least 8 characters");
+    if (!/[A-Z]/.test(password)) errors.push("One uppercase letter");
+    if (!/[a-z]/.test(password)) errors.push("One lowercase letter");
+    if (!/\d/.test(password)) errors.push("One number");
+    if (!/[!@#$%^&*(),.?\":{}|<>]/.test(password)) errors.push("One special character");
     return errors;
   };
 
+  // Handle password reset submit
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setError("");
     if (!oobCode) return;
 
-    setError('');
-    
-    // Validate passwords match
     if (newPassword !== confirmPassword) {
-      setError('Passwords do not match');
+      setError("Passwords do not match");
       return;
     }
-
-    // Validate password strength
     const passwordErrors = validatePassword(newPassword);
     if (passwordErrors.length > 0) {
-      setError(`Password must include: ${passwordErrors.join(', ')}`);
+      setError(`Password must include: ${passwordErrors.join(", ")}`);
       return;
     }
-
     try {
       setIsSubmitting(true);
-      
-      // Replace with actual Firebase call:
-      // await firebase.auth().confirmPasswordReset(oobCode, newPassword);
-      await mockFirebase.auth().confirmPasswordReset(oobCode, newPassword);
-      
+      await confirmPasswordReset(auth, oobCode, newPassword);
       setIsComplete(true);
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to reset password. Please try again.');
+    } catch (err: any) {
+      setError(err.message ?? "Failed to reset password. Please try again.");
     } finally {
       setIsSubmitting(false);
     }
@@ -126,7 +100,7 @@ export function PasswordResetPage() {
 
   if (isValidating) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 flex items-center justify-center p-4">
+      <div style={{ background: "#fff", minHeight: "100vh" }} className="flex items-center justify-center p-4">
         <Card className="w-full max-w-md">
           <CardContent className="pt-6">
             <div className="flex flex-col items-center space-y-4">
@@ -312,3 +286,35 @@ export function PasswordResetPage() {
     </div>
   );
 }
+
+function setValidationError(arg0: string) {
+  throw new Error("Function not implemented.");
+}
+function setIsValidating(arg0: boolean) {
+  throw new Error("Function not implemented.");
+}
+
+function setOobCode(code: any) {
+  throw new Error("Function not implemented.");
+}
+
+function setIsValid(arg0: boolean) {
+  throw new Error("Function not implemented.");
+}
+
+function setError(arg0: string) {
+  throw new Error("Function not implemented.");
+}
+
+function validatePassword(newPassword: any) {
+  throw new Error("Function not implemented.");
+}
+
+function setIsSubmitting(arg0: boolean) {
+  throw new Error("Function not implemented.");
+}
+
+function setIsComplete(arg0: boolean) {
+  throw new Error("Function not implemented.");
+}
+
