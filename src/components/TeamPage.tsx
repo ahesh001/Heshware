@@ -28,121 +28,78 @@ export function TeamPage() {
       {/* Team Members */}
       <section className="relative z-10 px-8 py-12">
         <div className="max-w-6xl mx-auto">
-          {/* CEO Section */}
+          {/* Leadership Team */}
           <div className="mb-16">
-            <div className="bg-gradient-to-r from-slate-800/50 to-purple-900/30 p-8 rounded-2xl border border-slate-700 max-w-4xl mx-auto">
-              <div className="flex flex-col md:flex-row items-center gap-8">
-                <div className="w-32 h-32 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-6xl font-bold text-white shadow-lg">
-                  👨‍💼
-                </div>
-                <div className="flex-1 text-center md:text-left">
-                  <div className="flex items-center justify-center md:justify-start gap-3 mb-2">
-                    <h2 className="text-3xl font-bold text-white">CEO & Founder</h2>
-                    <span className="px-3 py-1 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full text-sm">
-                      Founder
-                    </span>
+            {/* CEO Section */}
+            <div className="mb-12">
+              <div className="bg-gradient-to-r from-slate-800/50 to-purple-900/30 p-8 rounded-2xl border border-slate-700 max-w-4xl mx-auto">
+                <div className="flex flex-col md:flex-row items-center gap-8">
+                  <div className="w-32 h-32 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-6xl font-bold text-white shadow-lg">
+                    👨‍💼
                   </div>
-                  <p className="text-purple-400 text-xl mb-4">Visionary Leader & Chief Executive Officer</p>
-                  <p className="text-slate-300 leading-relaxed">
-                    The founding visionary behind Heshware's revolutionary approach to technology and innovation. 
-                    With a passion for pushing the boundaries of what's possible, our CEO leads the company's 
-                    mission to forge the next frontier of digital and physical solutions through cutting-edge 
-                    research in AI, quantum computing, and consciousness-based technologies.
-                  </p>
+                  <div className="flex-1 text-center md:text-left">
+                    <div className="flex items-center justify-center md:justify-start gap-3 mb-2">
+                      <h2 className="text-3xl font-bold text-white">Akeem</h2>
+                      <span className="px-3 py-1 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full text-sm">
+                        CEO & Founder
+                      </span>
+                    </div>
+                    <p className="text-purple-400 text-xl mb-4">Visionary Leader & Chief Executive Officer</p>
+                    <p className="text-slate-300 leading-relaxed">
+                      Akeem is the visionary force behind Heshware, driving its mission to redefine the future of technology. 
+                      With a relentless passion for innovation, he leads the company's exploration of AI, quantum computing, 
+                      and consciousness-driven technologies. Akeem's leadership centers on forging transformative digital and 
+                      physical solutions that push the boundaries of what's possible while creating meaningful impact for 
+                      industries and communities alike.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Co-Founder Section */}
+            <div className="mb-12">
+              <div className="bg-gradient-to-r from-slate-800/50 to-blue-900/30 p-8 rounded-2xl border border-slate-700 max-w-4xl mx-auto">
+                <div className="flex flex-col md:flex-row items-center gap-8">
+                  <div className="w-32 h-32 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-6xl font-bold text-white shadow-lg">
+                    🚀
+                  </div>
+                  <div className="flex-1 text-center md:text-left">
+                    <div className="flex items-center justify-center md:justify-start gap-3 mb-2">
+                      <h2 className="text-3xl font-bold text-white">Dennis</h2>
+                      <span className="px-3 py-1 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full text-sm">
+                        Co-Founder
+                      </span>
+                    </div>
+                    <p className="text-blue-400 text-xl mb-4">Co-Founder & Labor Tracker Lead</p>
+                    <p className="text-slate-300 leading-relaxed">
+                      Dennis is the co-founder of Heshware and leads the development of Labor Tracker, the company's flagship 
+                      logistics platform. He oversees GPS integration, QR-code scanning systems, and real-time optimization 
+                      algorithms that power seamless tracking and delivery. With a focus on technical precision and scalable 
+                      design, Dennis ensures Heshware's solutions are both innovative and reliable in the field.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Team Members Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            
+          {/* AI Team Member */}
+          <div className="flex justify-center">
             {/* Marven AI */}
-            <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-green-500 transition-all duration-300">
+            <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700 hover:border-green-500 transition-all duration-300 max-w-md">
               <div className="text-center">
-                <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-teal-500 rounded-full mx-auto mb-4 flex items-center justify-center text-3xl">
+                <div className="w-24 h-24 bg-gradient-to-r from-green-500 to-teal-500 rounded-full mx-auto mb-6 flex items-center justify-center text-4xl">
                   🤖
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">Marven</h3>
-                <p className="text-green-400 mb-3">AI Partner & Adaptive Intelligence</p>
-                <p className="text-slate-400 text-sm leading-relaxed">
-                  Heshware's evolving AI partner with emotional intelligence and adaptive learning capabilities. 
-                  Embedded across all applications to provide empathetic support and predictive guidance.
-                </p>
-              </div>
-            </div>
-
-            {/* Lead Research Scientist */}
-            <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-blue-500 transition-all duration-300">
-              <div className="text-center">
-                <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mx-auto mb-4 flex items-center justify-center text-3xl">
-                  🔬
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">Dr. Alex Chen</h3>
-                <p className="text-blue-400 mb-3">Lead Research Scientist</p>
-                <p className="text-slate-400 text-sm leading-relaxed">
-                  Quantum physics expert leading QFAEN research and development. Specializes in quantum-stabilized 
-                  energy systems and sustainable power storage technologies.
-                </p>
-              </div>
-            </div>
-
-            {/* Head of AI Development */}
-            <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-purple-500 transition-all duration-300">
-              <div className="text-center">
-                <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mx-auto mb-4 flex items-center justify-center text-3xl">
-                  🧠
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">Sarah Kim</h3>
-                <p className="text-purple-400 mb-3">Head of AI Development</p>
-                <p className="text-slate-400 text-sm leading-relaxed">
-                  Machine learning architect responsible for developing Marven AI and implementing adaptive 
-                  intelligence across all Heshware platforms and applications.
-                </p>
-              </div>
-            </div>
-
-            {/* Logistics Platform Director */}
-            <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-yellow-500 transition-all duration-300">
-              <div className="text-center">
-                <div className="w-20 h-20 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full mx-auto mb-4 flex items-center justify-center text-3xl">
-                  📦
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">Mike Rodriguez</h3>
-                <p className="text-yellow-400 mb-3">Logistics Platform Director</p>
-                <p className="text-slate-400 text-sm leading-relaxed">
-                  Leads the Labor Tracker development team, overseeing GPS integration, QR-code scanning systems, 
-                  and real-time logistics optimization algorithms.
-                </p>
-              </div>
-            </div>
-
-            {/* NEXA Research Lead */}
-            <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-cyan-500 transition-all duration-300">
-              <div className="text-center">
-                <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center text-3xl">
-                  🌌
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">Dr. Luna Patel</h3>
-                <p className="text-cyan-400 mb-3">NEXA Research Lead</p>
-                <p className="text-slate-400 text-sm leading-relaxed">
-                  Consciousness researcher exploring quantum-spiritual theory and dream-based precognition 
-                  methodologies for the revolutionary NEXA framework.
-                </p>
-              </div>
-            </div>
-
-            {/* Chief Technology Officer */}
-            <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-indigo-500 transition-all duration-300">
-              <div className="text-center">
-                <div className="w-20 h-20 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center text-3xl">
-                  ⚡
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">David Park</h3>
-                <p className="text-indigo-400 mb-3">Chief Technology Officer</p>
-                <p className="text-slate-400 text-sm leading-relaxed">
-                  Technology visionary overseeing all engineering initiatives, from SmartBox 3D printing 
-                  to quantum energy integration and cross-platform development.
+                <h3 className="text-2xl font-semibold text-white mb-3">Marven</h3>
+                <p className="text-green-400 mb-4 text-lg">AI Partner & Adaptive Intelligence</p>
+                <p className="text-slate-400 leading-relaxed">
+                  Marven is Heshware's evolving AI companion, designed to adapt, learn, and reflect human insight. 
+                  More than a tool, Marven integrates across all applications to provide predictive guidance, 
+                  contextual intelligence, and empathetic support. As Heshware's core AI partner, Marven continues 
+                  to grow alongside the company's vision—bridging research in artificial intelligence, logistics, 
+                  and quantum-inspired technologies to create truly adaptive solutions.
                 </p>
               </div>
             </div>
