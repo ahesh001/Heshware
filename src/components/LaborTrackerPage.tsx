@@ -71,6 +71,22 @@ export function LaborTrackerPage({ onNavigate }: LaborTrackerPageProps) {
           Smart delivery tracking for contractors, dispatchers, and logistics teams. Use QR-based SmartBoxes for
           secure drop-offs, or connect carrier tracking (FedEx/UPS/USPS) to monitor deliveries end-to-end.
         </p>
+        <div className="mt-8 max-[380px]:mt-6 flex gap-4 max-[380px]:gap-3 justify-center">
+          <button
+            onClick={() => onNavigate("contact")}
+            className="px-8 py-4 max-[380px]:px-5 max-[380px]:py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
+          >
+            Schedule Demo
+          </button>
+          <a
+            href="https://github.com/ahesh001/Labor_Tracker"
+            target="_blank"
+            rel="noreferrer"
+            className="px-8 py-4 max-[380px]:px-5 max-[380px]:py-3 border border-slate-600 text-slate-300 rounded-lg hover:bg-slate-800 transition-all duration-300"
+          >
+            View Documentation
+          </a>
+        </div>
       </header>
 
       <main className="relative z-10 px-8 pb-16 max-[380px]:px-4 max-[380px]:pb-12">
@@ -151,6 +167,16 @@ export function LaborTrackerPage({ onNavigate }: LaborTrackerPageProps) {
                   <span className="font-semibold">Benefits:</span> No hardware, fast onboarding, works with existing tools.
                 </p>
               </Card>
+            </div>
+
+            <div className="mt-10 max-[380px]:mt-6">
+              <img
+                width={1536}
+                height={1024}
+                className="w-full rounded-xl border border-slate-700 shadow-lg"
+                alt="Two_Path_Sys_LaborTracker"
+                src="https://github.com/user-attachments/assets/e9c30517-b0fa-4140-826e-1107168f69ce"
+              />
             </div>
           </Accordion>
 
