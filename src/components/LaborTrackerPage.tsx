@@ -197,22 +197,6 @@ export default function LaborTrackerPage() {
         <div className="shooting-star"></div>
       </div>
 
-      {/* Navigation */}
-      <nav className="relative z-10 p-6 max-[380px]:p-4 flex justify-between items-center">
-        <button
-          onClick={() => backOr("/learn-more")}
-          className="text-slate-300 hover:text-white transition-colors duration-300 flex items-center gap-2 max-[380px]:text-sm"
-        >
-          ← Back to Learn More
-        </button>
-        <Link
-          to="/"
-          className="text-slate-300 hover:text-white transition-colors duration-300 max-[380px]:text-sm"
-        >
-          Home
-        </Link>
-      </nav>
-
       {/* Header / Hero */}
       <header className="relative z-10 text-center py-12 max-[380px]:py-8">
         <div className="w-20 h-20 max-[380px]:w-14 max-[380px]:h-14 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl mx-auto mb-6 max-[380px]:mb-4 grid place-items-center">
@@ -225,22 +209,6 @@ export default function LaborTrackerPage() {
           Smart delivery tracking for contractors, dispatchers, and logistics teams. Use QR-based SmartBoxes for
           secure drop-offs, or connect carrier tracking (FedEx/UPS/USPS) to monitor deliveries end-to-end.
         </p>
-        <div className="mt-8 max-[380px]:mt-6 flex gap-4 max-[380px]:gap-3 justify-center">
-          <Link
-            to="/contact"
-            className="px-8 py-4 max-[380px]:px-5 max-[380px]:py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
-          >
-            Schedule Demo
-          </Link>
-          <a
-            href="https://github.com/ahesh001/Labor_Tracker"
-            target="_blank"
-            rel="noreferrer"
-            className="px-8 py-4 max-[380px]:px-5 max-[380px]:py-3 border border-slate-600 text-slate-300 rounded-lg hover:bg-slate-800 transition-all duration-300"
-          >
-            View Documentation
-          </a>
-        </div>
       </header>
 
       <main className="relative z-10 px-8 pb-16 max-[380px]:px-4 max-[380px]:pb-12">
@@ -322,16 +290,7 @@ export default function LaborTrackerPage() {
                 </p>
               </Card>
             </div>
-
-            <div className="mt-10 max-[380px]:mt-6">
-              <img
-                width={1536}
-                height={1024}
-                className="w-full rounded-xl border border-slate-700 shadow-lg"
-                alt="Two_Path_Sys_LaborTracker"
-                src="https://github.com/user-attachments/assets/e9c30517-b0fa-4140-826e-1107168f69ce"
-              />
-            </div>
+            <ComingSoonImage label="App screenshots" />
           </Accordion>
 
           {/* Role-Based UX */}
