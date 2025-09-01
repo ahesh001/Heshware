@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate, useNavigate, BrowserRouter, useLocation } from 'react-router-dom';
 
 import HomePage from './components/HomePage';
@@ -57,6 +58,3 @@ export default function App() {
   );
 }
 
-function useEffect(arg0: () => void, arg1: any[]) {
-  throw new Error('Function not implemented.');
-}
