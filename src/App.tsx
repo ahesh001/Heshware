@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate, useNavigate, BrowserRouter, useLocation } from 'react-router-dom';
+import RouteScrollTop from "./components/RouteScrollTop";
 
 import HomePage from './components/HomePage';
 import ContactPage from './components/ContactPage';
@@ -22,16 +23,16 @@ import PasswordResetPage from './components/PasswordResetPage';
 import SmartBoxPage from './components/SmartBoxPage';
 
 // Scroll to top on route change
-function ScrollToTop() {
+/*function ScrollToTop() {
   const { pathname } = useLocation();
   useEffect(() => { window.scrollTo(0, 0); }, [pathname]);
   return null;
-}
+}*/
 
 export default function App() {
   return (
     <>
-      <ScrollToTop />
+      <RouteScrollTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/learn-more" element={<LearnMorePage />} />
