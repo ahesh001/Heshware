@@ -224,7 +224,7 @@ export default function MarvenPage() {
           </p>
           <div className="flex gap-4 justify-center">
             <button 
-              //onClick={() => onNavigate('contact')}
+              onClick={() => window.open('/marven/chat', '_blank', 'noopener,noreferrer')}
               className="px-8 py-4 bg-gradient-to-r from-green-600 to-teal-600 text-white rounded-lg hover:from-green-700 hover:to-teal-700 transition-all duration-300 transform hover:scale-105"
             >
               Beta Access

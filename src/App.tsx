@@ -10,6 +10,7 @@ import LaborTrackerPage from './components/LaborTrackerPage';
 import QfaenPage from './components/QfaenPage';
 import NexaPage from './components/NexaPage';
 import MarvenPage from './components/MarvenPage';
+import MarvenChatPage from "./components/MarvenChatPage";
 import TeamPage from './components/TeamPage';
 import MissionExpansionPage from './components/MissionExpansionPage';
 import HeshwareQuantumPage from './components/HeshwareQuantumPage';
@@ -39,6 +40,7 @@ export default function App() {
         <Route path="/labor-tracker" element={<LaborTrackerPage />} />
         <Route path="/smartbox" element={<SmartBoxPage />} />
         <Route path="/marven" element={<MarvenPage />} />
+        <Route path="/marven/chat" element={<MarvenChatPage />} />
         <Route path="/nexa" element={<NexaPage />} />
         <Route path="/team" element={<TeamPage />} />
         <Route path="/contact" element={<ContactPage />} />
