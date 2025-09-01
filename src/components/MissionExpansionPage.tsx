@@ -1,7 +1,7 @@
 import { ArrowLeft, Home, Target, Sprout, Building2, Rocket, Brain, Globe, Zap } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
-export function MissionExpansionPage() {
+export default function MissionExpansionPage() {
   const navigate = useNavigate();
 
   return (

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ChevronDown, Building2, Cpu, Sprout, Zap, Brain, Users } from "lucide-react";
 
-export function CompanyDivisionsSnackbar() {
+export default function CompanyDivisionsSnackbar() {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
 

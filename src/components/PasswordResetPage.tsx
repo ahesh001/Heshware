@@ -13,7 +13,7 @@ import { Alert, AlertDescription } from './ui/alert';
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-export function PasswordResetPage() {
+export default function PasswordResetPage() {
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
   const [oobCode, setOobCode] = useState<string | null>(null);

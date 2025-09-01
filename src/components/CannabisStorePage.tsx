@@ -2,7 +2,7 @@ import { ArrowLeft, Home, Leaf, ShoppingCart, Bell, Mail, Calendar, Star } from 
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
-export function CannabisStorePage() {
+export default function CannabisStorePage() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [isSubscribed, setIsSubscribed] = useState(false);

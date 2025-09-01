@@ -1,40 +1,45 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate, useNavigate, BrowserRouter } from 'react-router-dom';
-import { HomePage } from './components/HomePage';
-import { ContactPage } from './components/ContactPage';
-import { LearnMorePage } from './components/LearnMorePage';
-import { LaborTrackerPage } from './components/LaborTrackerPage';
-import { QfaenPage } from './components/QfaenPage';
-import { NexaPage } from './components/NexaPage';
-import { MarvenPage } from './components/MarvenPage';
-import { TeamPage } from './components/TeamPage';
-import { MissionExpansionPage } from './components/MissionExpansionPage';
-import { HeshwareQuantumPage } from './components/HeshwareQuantumPage';
-import { HeshwareAIPage } from './components/HeshwareAIPage';
-import { HeshwareAgriculturePage } from './components/HeshwareAgriculturePage';
-import { HeshwareLabsPage } from './components/HeshwareLabsPage';
-import { HeshwareCulturePage } from './components/HeshwareCulturePage';
-import { HeshwareEnergyPage } from './components/HeshwareEnergyPage';
-import { CannabisStorePage } from './components/CannabisStorePage';
-import { PasswordResetPage } from './components/PasswordResetPage';
+import { BrowserRouter as Router, Routes, Route, Navigate, useNavigate, BrowserRouter, useLocation } from 'react-router-dom';
+
+import HomePage from './components/HomePage';
+import ContactPage from './components/ContactPage';
+import LearnMorePage from './components/LearnMorePage';
+import LaborTrackerPage from './components/LaborTrackerPage';
+import QfaenPage from './components/QfaenPage';
+import NexaPage from './components/NexaPage';
+import MarvenPage from './components/MarvenPage';
+import TeamPage from './components/TeamPage';
+import MissionExpansionPage from './components/MissionExpansionPage';
+import HeshwareQuantumPage from './components/HeshwareQuantumPage';
+import HeshwareAIPage from './components/HeshwareAIPage';
+import HeshwareAgriculturePage from './components/HeshwareAgriculturePage';
+import HeshwareLabsPage from './components/HeshwareLabsPage';
+import HeshwareCulturePage from './components/HeshwareCulturePage';
+import HeshwareEnergyPage from './components/HeshwareEnergyPage';
+import CannabisStorePage from './components/CannabisStorePage';
+import PasswordResetPage from './components/PasswordResetPage';
+import SmartBoxPage from './components/SmartBoxPage';
+
+// Scroll to top on route change
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  return null;
+}
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/contact" element={<ContactPage />} />
         <Route path="/learn-more" element={<LearnMorePage />} />
-        <Route path="/labor-tracker" element={<LaborTrackerPage onNavigate={function (page: 'home' | 'contact' | 'learn-more' | 'labor-tracker' | 'smartbox' | 'nexa' | 'marven'): void {
-          throw new Error('Function not implemented.');
-        } } />} />
-        <Route path="/qfaen" element={<QfaenPage onNavigate={function (page: 'home' | 'contact' | 'learn-more' | 'labor-tracker' | 'qfaen' | 'nexa' | 'marven' | 'team'): void {
-          throw new Error('Function not implemented.');
-        } } />} />
+        <Route path="/labor-tracker" element={<LaborTrackerPage />} />
+        <Route path="/smartbox" element={<SmartBoxPage />} />
+        <Route path="/marven" element={<MarvenPage />} />
         <Route path="/nexa" element={<NexaPage />} />
-        <Route path="/marven" element={<MarvenPage onNavigate={function (page: 'home' | 'contact' | 'learn-more' | 'labor-tracker' | 'smartbox' | 'nexa' | 'marven'): void {
-          throw new Error('Function not implemented.');
-        } } />} />
+        <Route path="/team" element={<TeamPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/qfaen" element={<QfaenPage />} />
         <Route path="/team" element={<TeamPage />} />
         <Route path="/mission-expansion" element={<MissionExpansionPage />} />
         <Route path="/heshware-quantum" element={<HeshwareQuantumPage />} />
@@ -45,9 +50,12 @@ export default function App() {
         <Route path="/heshware-energy" element={<HeshwareEnergyPage />} />
         <Route path="/cannabis-store" element={<CannabisStorePage />} />
         <Route path="/password-reset" element={<PasswordResetPage />} />
-        {/* Catch-all route - redirects any unmatched routes to home */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
-    </BrowserRouter>
+    </>
   );
+}
+
+function useEffect(arg0: () => void, arg1: any[]) {
+  throw new Error('Function not implemented.');
 }

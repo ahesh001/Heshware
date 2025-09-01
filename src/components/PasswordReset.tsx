@@ -24,7 +24,7 @@ const mockFirebase = {
   })
 };
 
-export function PasswordResetPage() {
+export default function PasswordResetPage() {
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
   const [oobCode, setOobCode] = useState<string | null>(null);

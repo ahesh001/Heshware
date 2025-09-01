@@ -1,10 +1,12 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
 type NavigationFunction = (page: 'home' | 'contact' | 'learn-more' | 'labor-tracker' | 'smartbox' | 'nexa' | 'marven') => void;
 
 interface MarvenPageProps {
   onNavigate: NavigationFunction;
 }
 
-export function MarvenPage({ onNavigate }: MarvenPageProps) {
+export default function MarvenPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-black relative overflow-hidden">
       {/* Shooting Stars Background */}
@@ -15,12 +17,6 @@ export function MarvenPage({ onNavigate }: MarvenPageProps) {
         <div className="shooting-star"></div>
         <div className="shooting-star"></div>
       </div>
-
-      {/* Navigation */}
-<nav>
-        <button onClick={() => onNavigate("learn-more")}>← Back to Learn More</button>
-        <button onClick={() => onNavigate("home")}>Home</button>
-      </nav>
 
       {/* Header */}
       <section className="relative z-10 text-center py-12">
@@ -228,7 +224,7 @@ export function MarvenPage({ onNavigate }: MarvenPageProps) {
           </p>
           <div className="flex gap-4 justify-center">
             <button 
-              onClick={() => onNavigate('contact')}
+              //onClick={() => onNavigate('contact')}
               className="px-8 py-4 bg-gradient-to-r from-green-600 to-teal-600 text-white rounded-lg hover:from-green-700 hover:to-teal-700 transition-all duration-300 transform hover:scale-105"
             >
               Beta Access

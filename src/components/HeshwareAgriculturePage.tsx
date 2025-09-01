@@ -1,7 +1,7 @@
 import { ArrowLeft, Home, Leaf, Droplets, Sun, TreePine, Beaker, ShoppingCart } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
-export function HeshwareAgriculturePage() {
+export default function HeshwareAgriculturePage() {
   const navigate = useNavigate();
 
   return (

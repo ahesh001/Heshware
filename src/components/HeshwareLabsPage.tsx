@@ -1,7 +1,7 @@
 import { ArrowLeft, Home, Brain, Atom, Zap, Eye, Microscope, FlaskConical } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
-export function HeshwareLabsPage() {
+export default function HeshwareLabsPage() {
   const navigate = useNavigate();
 
   return (

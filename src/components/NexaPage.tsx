@@ -1,7 +1,7 @@
 import { ArrowLeft, Home, ExternalLink, Github, Users, Target, Lightbulb, FileText } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
-export function NexaPage() {
+export default function NexaPage() {
   const navigate = useNavigate();
 
   const handleGitHubLink = () => {

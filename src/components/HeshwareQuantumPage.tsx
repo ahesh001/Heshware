@@ -1,7 +1,7 @@
 import { ArrowLeft, Home, Cpu, Zap, Atom, Binary, Layers } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
-export function HeshwareQuantumPage() {
+export default function HeshwareQuantumPage() {
   const navigate = useNavigate();
 
   return (

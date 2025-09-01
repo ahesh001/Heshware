@@ -6,7 +6,7 @@ interface QfaenPageProps {
   onNavigate: NavigationFunction;
 }
 
-export function QfaenPage({ onNavigate }: QfaenPageProps) {
+export default function QfaenPage() {
   const handleDownloadWhitePaper = () => {
     // In a real application, this would download the actual PDF
     // For now, we'll simulate the download
@@ -21,22 +21,6 @@ export function QfaenPage({ onNavigate }: QfaenPageProps) {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-black relative overflow-hidden">
-      {/* Navigation */}
-      <nav className="relative z-10 p-6 flex justify-between items-center">
-        <button 
-          onClick={() => onNavigate('learn-more')}
-          className="text-slate-300 hover:text-white transition-colors duration-300 flex items-center gap-2"
-        >
-          ← Back to Learn More
-        </button>
-        <button 
-          onClick={() => onNavigate('home')}
-          className="text-slate-300 hover:text-white transition-colors duration-300"
-        >
-          Home
-        </button>
-      </nav>
-
       {/* Header */}
       <section className="relative z-10 text-center py-12">
         <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl mx-auto mb-6 flex items-center justify-center">
@@ -330,7 +314,7 @@ export function QfaenPage({ onNavigate }: QfaenPageProps) {
           </p>
           <div className="flex gap-4 justify-center">
             <button 
-              onClick={() => onNavigate('contact')}
+              //onClick={() => onNavigate('contact')}
               className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
             >
               Research Partnership

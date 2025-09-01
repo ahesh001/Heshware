@@ -1,10 +1,18 @@
+import { Link } from "react-router-dom";
+import React from "react";
 type NavigationFunction = (page: 'home' | 'contact' | 'learn-more' | 'labor-tracker' | 'smartbox' | 'nexa' | 'marven') => void;
 
 interface SmartBoxPageProps {
   onNavigate: NavigationFunction;
 }
 
-export function SmartBoxPage({ onNavigate }: SmartBoxPageProps) {
+export default function SmartBoxPage() {
+  const onNavigate: NavigationFunction = (page) => {
+    // Example: Use window.location or a router, but here just log for demo
+    console.log(`Navigating to: ${page}`);
+    // In a real app, you might use something like:
+    // navigate(`/${page}`);
+  };
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-black relative overflow-hidden">
       {/* Shooting Stars Background */}

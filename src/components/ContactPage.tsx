@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, Mail, Phone, MapPin, Send } from 'lucide-react';
 
-export function ContactPage() {
+export default function ContactPage() {
   const navigate = useNavigate();
 
   return (

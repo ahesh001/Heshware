@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 
-export function LearnMorePage() {
+export default function LearnMorePage() {
   const navigate = useNavigate();
 
   return (

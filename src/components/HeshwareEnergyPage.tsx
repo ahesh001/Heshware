@@ -1,7 +1,7 @@
 import { ArrowLeft, Home, Zap, Battery, Sun, Wind, Recycle, Atom } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
-export function HeshwareEnergyPage() {
+export default function HeshwareEnergyPage() {
   const navigate = useNavigate();
 
   return (

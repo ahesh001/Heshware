@@ -1,7 +1,7 @@
 import { ArrowLeft, Home, Users, Heart, Star, Trophy, Coffee, Lightbulb } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
-export function HeshwareCulturePage() {
+export default function HeshwareCulturePage() {
   const navigate = useNavigate();
 
   return (

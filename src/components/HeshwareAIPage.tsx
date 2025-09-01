@@ -1,7 +1,7 @@
 import { ArrowLeft, Home, Brain, Bot, Network, Zap, Target, Users } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
-export function HeshwareAIPage() {
+export default function HeshwareAIPage() {
   const navigate = useNavigate();
 
   return (
